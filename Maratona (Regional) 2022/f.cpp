@@ -2,7 +2,7 @@
 using namespace std;
 int n, c, att, cont;
 int aux = 0;
-string s, vitoria;
+string s, valor;
 
 vector <string> vet;
 vector < pair <string, int> > palavra;
@@ -61,13 +61,13 @@ int main(){
         palavra[i].second = cont;
         if(cont>aux)
         {
-            vitoria = palavra[i].first;
+            valor = palavra[i].first;
             aux = cont;
         }
         // cout << "**********";
     }
 
-    cout << vitoria << " " << aux << "\n";
+    cout << valor << " " << aux << "\n";
 
     return 0;
 }
