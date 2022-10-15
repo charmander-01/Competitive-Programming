@@ -2,7 +2,7 @@
 using namespace std;
 int n, c, att, cont;
 int aux = 0;
-string s, valor;
+string s, resposta;
 
 vector <string> vet;
 vector < pair <string, int> > palavra;
@@ -27,18 +27,13 @@ int main(){
         for(int i = 0; i < 26; i++){
             s[att] = 'a' + i;
             vet.push_back(s);
-            //cout << s << "\n";
- 
         }
-
     }
 
     palavra.resize(vet.size());
 
     sort(vet.begin(), vet.end());
-
-    // cout << "**********";
-
+    
     for(int i = 0; i < vet.size(); i++){
         int j;
         cont = 1;
@@ -56,18 +51,17 @@ int main(){
                 i = j;
             }
         }
-        // cout << "**********";
+        
         palavra[i].first = vet[i];
         palavra[i].second = cont;
         if(cont>aux)
         {
-            valor = palavra[i].first;
+            resposta = palavra[i].first;
             aux = cont;
         }
-        // cout << "**********";
     }
 
-    cout << valor << " " << aux << "\n";
+    cout << resposta << " " << aux << "\n";
 
     return 0;
 }
